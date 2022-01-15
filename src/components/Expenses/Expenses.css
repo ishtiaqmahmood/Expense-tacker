@@ -5,3 +5,8 @@
   width: 50rem;
   max-width: 95%;
 }
+
+.expenses_found {
+  font-weight: 600;
+  color: white;
+}
