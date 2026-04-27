@@ -41,7 +41,11 @@ function ExpenseForm(props) {
 
     //console.log(expenseData);
     props.onSaveExpenseData(expenseData);
-    setValue("");
+    setValue({
+      enteredTitle: "",
+      enteredAmount: "",
+      enteredDate: "",
+    });
   };
 
   return (

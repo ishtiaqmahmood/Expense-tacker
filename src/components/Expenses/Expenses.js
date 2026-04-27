@@ -6,7 +6,7 @@ import ExpensesChart from './ExpensesChart';
 import ExpensesFilter from "./ExpensesFilter";
 
 function Expenses(props) {
-  const [filteredYear, setFilteredYear] = useState("2020");
+  const [filteredYear, setFilteredYear] = useState("2021");
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
@@ -27,9 +27,9 @@ function Expenses(props) {
         {filteredExpenses.length === 0 ? (
           <p className="expenses_found">Found no expenses</p>
         ) : (
-          filteredExpenses.map((expense, index) => (
+          filteredExpenses.map((expense) => (
             <ExpenseItem
-              key={index}
+              key={expense.id}
               title={expense.title}
               amount={expense.amount}
               date={expense.date}
